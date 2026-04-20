@@ -50,14 +50,14 @@ const songs = [
 ]
 
 const artists = [
-    { name: "Pritam", image: "Assets/Popular artisits/first.jpeg" },
-    { name: "A.R.Rahman", image: "Assets/Popular artisits/second.jpeg" },
-    { name: "Arijit Singh", image: "Assets/Popular artisits/third.jpeg" },
-    { name: "Sachin-Jigar", image: "Assets/Popular artisits/fourth.jpeg" },
-    { name: "Vishal-Shekhar", image: "Assets/Popular artisits/fifth.jpeg" },
-    { name: "Atif Aslam", image: "Assets/Popular artisits/sixth.jpeg" },
-    { name: "Anirudh Ravichander", image: "Assets/Popular artisits/seveth.jpeg" },
-    { name: "Udit Narayan", image: "Assets/Popular artisits/eighth.jpeg" },
+    { name: "Pritam", image: "Assets/popular artist/first.jpeg" },
+    { name: "A.R.Rahman", image: "Assets/popular artist/second.jpeg" },
+    { name: "Arijit Singh", image: "Assets/popular artist/third.jpeg" },
+    { name: "Sachin-Jigar", image: "Assets/popular artist/fourth.jpeg" },
+    { name: "Vishal-Shekhar", image: "Assets/popular artist/fifth.jpeg" },
+    { name: "Atif Aslam", image: "Assets/popular artist/sixth.jpeg" },
+    { name: "Anirudh Ravichander", image: "Assets/popular artist/seveth.jpeg" },
+    { name: "Udit Narayan", image: "Assets/popular artist/eighth.jpeg" },
 ]
 
 async function seed() {
