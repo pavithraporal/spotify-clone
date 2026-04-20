@@ -139,6 +139,9 @@ app.post('/api/playlists/addsong', async (req, res) => {
 })
 
 app.use(express.static(__dirname))
+app.get('/', (req, res) => {
+    res.sendFile(__dirname + '/spotify.html')
+})
 
 app.listen(3000, () => {
     console.log('Server running on port 3000')
