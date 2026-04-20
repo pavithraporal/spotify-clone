@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify Clone</title>
+    <link rel="stylesheet" href="spotify.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="Assets/logo.svg" alt="spotify">
+            </div>
+            <div class="home">
+                <img src="Assets/home.svg" alt="home">
+            </div>
+            <div style="position: relative; width: 300px; display: flex; align-items: center;">
+                <svg style="position: absolute; left: 10px; pointer-events: none;" viewBox="0 0 24 24" width="18"
+                    height="18" fill="#888" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M10.533 1.27893C5.35215 1.27893 1.12598 5.41887 1.12598 10.5579C1.12598 15.697 5.35215 19.8369 10.533 19.8369C12.767 19.8369 14.8235 19.0671 16.4402 17.7794L20.7929 22.132C21.1834 22.5226 21.8166 22.5226 22.2071 22.132C22.5976 21.7415 22.5976 21.1083 22.2071 20.7178L17.8634 16.3741C19.1616 14.7849 19.94 12.7634 19.94 10.5579C19.94 5.41887 15.7138 1.27893 10.533 1.27893ZM3.12598 10.5579C3.12598 6.55226 6.42768 3.27893 10.533 3.27893C14.6383 3.27893 17.94 6.55226 17.94 10.5579C17.94 14.5636 14.6383 17.8369 10.533 17.8369C6.42768 17.8369 3.12598 14.5636 3.12598 10.5579Z" />
+                </svg>
+                <input type="text" placeholder="what you want to hear?"
+                    style="width: 100%; padding: 10px 60px 10px 36px; border-radius: 20px; font-size: 14px;">
+                <span style="position: absolute; right: 38px; height: 18px; width: 1px; background: #ccc;"></span>
+                <svg style="position: absolute; right: 10px; pointer-events: none;" viewBox="0 0 24 24" width="18"
+                    height="18" fill="#888" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15 15.5c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2" />
+                    <path
+                        d="M1.513 9.37A1 1 0 0 1 2.291 9h19.418a1 1 0 0 1 .979 1.208l-2.339 11a1 1 0 0 1-.978.792H4.63a1 1 0 0 1-.978-.792l-2.339-11a1 1 0 0 1 .201-.837zM3.525 11l1.913 9h13.123l1.913-9zM4 2a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v4h-2V3H6v3H4z" />
+                </svg>
+            </div>
+            <div class="content">
+                <span style="color: white;" class="black">Premium</span>
+                <span style="color: white;" class="black">Support</span>
+                <span style="color: white;" class="black">Download</span>
+                <span style="color: white;" class="black">|</span>
+                <img src="Assets/download.svg" alt="">
+                <span style="color: white;" class="black">Install app</span>
+                <span style="color: white;" class="black">Sign up</span>
+                <button>login</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="sidebar">
+            <div class="in">
+                <span style="color: white;">Your Library</span>
+                <span><button class="btn">+Create</button></span>
+            </div>
+            <div class="fi">
+                <h4>Create your first Playlist</h4>
+                <p>it's easy, we'll help you</p>
+                <button class="bold">Create Playlist</button>
+            </div>
+            <div class="si">
+                <h4>Let's find some podcast to follow</h4>
+                <p>We will keep you updated on new episodes</p>
+                <button class="bold">Browse Podcast</button>
+            </div>
+
+            <div class="sidebar-footer">
+                <div class="lfoot">
+                    <div class="footcontent" style="display:flex; flex-wrap:wrap; gap:8px;">
+                        <div class="bg">
+                            <a href="https://www.spotify.com/in-en/legal/"><span class="bg">Legal</span></a>
+                        </div>
+                        <div class="bg">
+                            <a href="https://www.spotify.com/in-en/safetyandprivacy/"><span class="bg">Safety &amp;
+                                    Privacy</span></a>
+                        </div>
+                        <div class="bg">
+                            <a href="https://www.spotify.com/in-en/legal/privacy-policy/"><span class="bg">Privacy
+                                    Policy</span></a>
+                        </div>
+                        <div class="bg">
+                            <a href="https://www.spotify.com/in-en/legal/cookies-policy/"><span
+                                    class="bg">Cookies</span></a>
+                        </div>
+                        <div class="bg">
+                            <a href="https://www.spotify.com/in-en/legal/privacy-policy/#s3"><span class="bg">About
+                                    Ads</span></a>
+                        </div>
+                        <div class="bg">
+                            <a href="https://www.spotify.com/in-en/accessibility/"><span
+                                    class="bg">Accessibility</span></a>
+                        </div>
+                    </div>
+                    <a href="https://www.spotify.com/legal/cookies-policy/" target="_blank" rel="noopener">
+                        <span class="bg">Cookies</span>
+                    </a>
+                </div>
+                <div class="bg" style="margin-top:10px;">
+                    <button class="btn lang">
+                        <span class="bg">
+                            <svg viewBox="0 0 16 16" width="16" height="16" fill="#888"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M8.152 16H8a8 8 0 1 1 .152 0m-.41-14.202c-.226.273-.463.713-.677 1.323-.369 1.055-.626 2.496-.687 4.129h3.547c-.06-1.633-.318-3.074-.687-4.129-.213-.61-.45-1.05-.676-1.323-.194-.235-.326-.285-.385-.296h-.044c-.055.007-.19.052-.391.296M4.877 7.25c.062-1.771.34-3.386.773-4.624q.148-.427.329-.806a6.51 6.51 0 0 0-4.436 5.43zm-3.334 1.5a6.51 6.51 0 0 0 4.436 5.43 8 8 0 0 1-.33-.806c-.433-1.238-.71-2.853-.772-4.624zm4.835 0c.061 1.633.318 3.074.687 4.129.214.61.451 1.05.677 1.323.202.244.336.29.391.297l.044-.001c.06-.01.19-.061.385-.296.226-.273.463-.713.676-1.323.37-1.055.626-2.496.687-4.129zm5.048 0c-.061 1.771-.339 3.386-.772 4.624q-.123.353-.268.674a6.5 6.5 0 0 0 4.071-5.298zm3.031-1.5a6.51 6.51 0 0 0-4.071-5.298q.145.322.268.674c.433 1.238.711 2.853.772 4.624z">
+                                </path>
+                            </svg>
+                        </span>
+                        English
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="trendingsongs">
+                <div class="heading">
+                    <h3>Trending songs</h3>
+                    <h5>Show all</h5>
+                </div>
+                <div class="images">
+                    <div class="card">
+                        <img style="height:200px;" width="200px" src="Assets/trending songs/first.jpeg" alt="">
+                        <h4>Ranjha</h4>
+                        <p>Dilijit Dosanjh , Sia, David Guetta</p>
+                    </div>
+                    <div class="card">
+                        <img style="height:200px;" width="200px" src="Assets/trending songs/second.jpeg" alt="">
+                        <h4>VOGUE</h4>
+                        <p>Guru randhawa , Gill Manchhrai,Rony Ajnali,...</p>
+                    </div>
+                    <div class="card">
+                        <img style="height:200px;" width="200px" src="Assets/trending songs/third.jpeg" alt="">
+                        <h4>Majboor</h4>
+                        <p>sheheryar Rehan,Zoha Waseem</p>
+                    </div>
+                    <div class="card">
+                        <img style="height:200px;" width="200px" src="Assets/trending songs/fourth.jpeg" alt="">
+                        <h4>Moves</h4>
+                        <p>Shubh</p>
+                    </div>
+                    <div class="card">
+                        <img style="height:200px;" width="200px" src="Assets/trending songs/fifth.jpeg" alt="">
+                        <h4>Bheegi Bheegi</h4>
+                        <p>A.R. Ameen,A.R.Rahman,Jasleen Royal</p>
+                    </div>
+                    <div class="card">
+                        <img style="height:200px;" width="200px" src="Assets/trending songs/sixth.jpeg" alt="">
+                        <h4>pavazha Malli - From "Think Indie</h4>
+                        <p>Sai Abhyankkar , Shruti Haasan , Vivek</p>
+                    </div>
+                    <div class="card">
+                        <img style="height:200px;" width="200px" src="Assets/trending songs/seventh.jpeg" alt="">
+                        <h4>Dheema(From "Love Insurance Company")</h4>
+                        <p>Anirudh Ravichander, Vignesh Shivan</p>
+                    </div>
+                    <div class="card">
+                        <img style="height:200px;" width="200px" src="Assets/trending songs/eighth.jpeg" alt="">
+                        <h4>Ehsaas</h4>
+                        <p>Faheem Abdullah, Duha Shah, Vaibhav Pani,....</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="popularartist">
+                <div class="heading">
+                    <h3>Popular Artist</h3>
+                    <h5>Show all</h5>
+                </div>
+                <div class="images">
+                    <div class="card1">
+                        <img src="Assets/popular artist/first.jpg" alt="">
+                        <h4>Pritam</h4>
+                        <p>Artist</p>
+                    </div>
+                    <div class="card1">
+                        <img src="Assets/popular artist/second.jpg" alt="">
+                        <h4>A.R.Rahman</h4>
+                        <p>Artist</p>
+                    </div>
+                    <div class="card1">
+                        <img src="Assets/popular artist/third.jpg" alt="">
+                        <h4>Arijit Singh</h4>
+                        <p>Artist</p>
+                    </div>
+                    <div class="card1">
+                        <img src="Assets/popular artist/fourth.jpg" alt="">
+                        <h4>Sachin-Jigar</h4>
+                        <p>Artist</p>
+                    </div>
+                    <div class="card1">
+                        <img src="Assets/popular artist/fifth.jpg" alt="">
+                        <h4>Vishal-Shekhar</h4>
+                        <p>Artist</p>
+                    </div>
+                    <div class="card1">
+                        <img src="Assets/popular artist/sixth.jpg" alt="">
+                        <h4>Atif Aslam</h4>
+                        <p>Artist</p>
+                    </div>
+                    <div class="card1">
+                        <img src="Assets/popular artist/seventh.jpg" alt="">
+                        <h4>Anirudh Ravichander</h4>
+                        <p>Artist</p>
+                    </div>
+                    <div class="card1">
+                        <img src="Assets/popular artist/eighth.jpg" alt="">
+                        <h4>Udit Narayan</h4>
+                        <p>Artist</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="trendingsongs">
+                <div class="heading">
+                    <h3>popular albums and singles</h3>
+                    <h5>Show all</h5>
+                </div>
+                <div class="images">
+                    <div class="card">
+                        <img style="height:200px;" width="200px" src="Assets/popular albums/first.jpeg" alt="">
+                        <h4>Aashiqui 2</h4>
+                        <p>Mithoon, Ankit Tiwari, Jeet Gannguli</p>
+                    </div>
+                    <div class="card">
+                        <img style="height:200px;" width="200px" src="Assets/popular albums/second.jpeg" alt="">
+                        <h4>Yeh Jawaani Hai Deewani</h4>
+                        <p>Pritam</p>
+                    </div>
+                    <div class="card">
+                        <img style="height:200px;" width="200px" src="Assets/popular albums/third.jpeg" alt="">
+                        <h4>Sanam Teri Kasam</h4>
+                        <p>Himesh Resgammiya, sameer Anjaan, Subrat...</p>
+                    </div>
+                    <div class="card">
+                        <img style="height:200px;" width="200px" src="Assets/popular albums/fourth.jpeg" alt="">
+                        <h4>Finding her</h4>
+                        <p>Kushagra, Bharath, Saaheal</p>
+                    </div>
+                    <div class="card">
+                        <img style="height:200px;" width="200px" src="Assets/popular albums/fifth.jpeg" alt="">
+                        <h4>Young G.O.A.T</h4>
+                        <p>Cheema Y,Gur Sidhu</p>
+                    </div>
+                    <div class="card">
+                        <img style="height:200px;" width="200px" src="Assets/popular albums/sixth.jpeg" alt="">
+                        <h4>Raanjhan(From "Do Patti")</h4>
+                        <p>Sachet-Parampara,Parampara Tandon,...</p>
+                    </div>
+                    <div class="card">
+                        <img style="height:200px;" width="200px" src="Assets/popular albums/seventh.jpeg" alt="">
+                        <h4>Ultimate Love Songs-Arijit singh</h4>
+                        <p>Arijit Singh</p>
+                    </div>
+                    <div class="card">
+                        <img style="height:200px;" width="200px" src="Assets/popular albums/eighth.jpeg" alt="">
+                        <h4>Making Memories</h4>
+                        <p>Karan Aujla,Ikky</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="trendingsongs">
+                <div class="heading">
+                    <h3>popular radio</h3>
+                    <h5>Show all</h5>
+                </div>
+                <div class="images">
+                    <div class="card">
+                        <img style="height:200px;" width="200px" src="Assets/popular radio/first.jpg" alt="">
+                        <p>With Sachin-Jigar,Jeet Gannguli,Pritam and...</p>
+                    </div>
+                    <div class="card">
+                        <img style="height:200px;" width="200px" src="Assets/popular radio/second.jpg" alt="">
+                        <p>With Pritam,Ankit Tiwari,Arijit Singh and...</p>
+                    </div>
+                    <div class="card">
+                        <img style="height:200px;" width="200px" src="Assets/popular radio/third.jpg" alt="">
+                        <p>With Arijit Singh , A.R.Rahman,Atif Aslam an...</p>
+                    </div>
+                    <div class="card">
+                        <img style="height:200px;" width="200px" src="Assets/popular radio/fourth.jpg" alt="">
+                        <p>With Kumar Sanu,Vinod Rathod,Udit Narayan...</p>
+                    </div>
+                    <div class="card">
+                        <img style="height:200px;" width="200px" src="Assets/popular radio/fifth.jpg" alt="">
+                        <p>With Shubh,AP Dhillon,Harrdy Sandhu and...</p>
+                    </div>
+                    <div class="card">
+                        <img style="height:200px;" width="200px" src="Assets/popular radio/sixth.jpg" alt="">
+                        <p>With Hariharan,Chinmayi,Arijit Singh...</p>
+                    </div>
+                    <div class="card">
+                        <img style="height:200px;" width="200px" src="Assets/popular radio/seventh.jpg" alt="">
+                        <p>With Dilijit Dosanjh,Vishal-Shekhar,Himes...</p>
+                    </div>
+                    <div class="card">
+                        <img style="height:200px;" width="200px" src="Assets/popular radio/eighth.jpg" alt="">
+                        <p>With SHubh,Prem Dhilion,Jxggi and</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="trendingsongs">
+                <div class="heading">
+                    <h3>Featured Charts</h3>
+                    <h5>Show all</h5>
+                </div>
+                <div class="images">
+                    <div class="card">
+                        <img style="height:200px;" width="200px" src="Assets/featured charts/first.jpeg" alt="">
+                        <p>Your weekly update of the most played tracks...</p>
+                    </div>
+                    <div class="card">
+                        <img style="height:200px;" width="200px" src="Assets/featured charts/second.jpeg" alt="">
+                        <p>Your weekly update of the most played tracks...</p>
+                    </div>
+                    <div class="card">
+                        <img style="height:200px;" width="200px" src="Assets/featured charts/third.jpeg" alt="">
+                        <p>Your daily update of the most played tracks...</p>
+                    </div>
+                    <div class="card">
+                        <img style="height:200px;" width="200px" src="Assets/featured charts/fourth.jpeg" alt="">
+                        <p>Your daily update of the most played tracks...</p>
+                    </div>
+                    <div class="card">
+                        <img style="height:200px;" width="200px" src="Assets/featured charts/fifth.jpeg" alt="">
+                        <p>Your daily update of the most played tracks...</p>
+                    </div>
+                    <div class="card">
+                        <img style="height:200px;" width="200px" src="Assets/featured charts/sixth.jpeg" alt="">
+                        <p>Your daily update of the most played tracks...</p>
+                    </div>
+                </div>
+            </div>
+
+            <footer>
+                <div class="footcontent">
+                    <div class="bg">
+                        <h5>Company</h5>
+                        <a href="#">About</a>
+                        <a href="#">Jobs</a>
+                        <a href="#">For the Record</a>
+                    </div>
+                    <div class="bg">
+                        <h5>Communities</h5>
+                        <a href="#">For Artists</a>
+                        <a href="#">Developers</a>
+                        <a href="#">Advertising</a>
+                        <a href="#">Investors</a>
+                        <a href="#">Vendors</a>
+                    </div>
+                    <div class="bg">
+                        <h5>Useful links</h5>
+                        <a href="#">Support</a>
+                        <a href="#">Free Mobile App</a>
+                        <a href="#">Popular by Country</a>
+                        <a href="#">Import your music</a>
+                    </div>
+                    <div class="bg">
+                        <h5>Spotify Plans</h5>
+                        <a href="#">Premium Lite</a>
+                        <a href="#">Premium Standard</a>
+                        <a href="#">Premium Platinum</a>
+                        <a href="#">Premium Student</a>
+                        <a href="#">Spotify Free</a>
+                    </div>
+                </div>
+                <div class="foot-bottom">
+                    <span class="foot-copy">© 2026 Spotify AB</span>
+                    <div class="social-icons">
+                        <a href="#">&#xf16d;</a>
+                        <a href="#">&#xf099;</a>
+                        <a href="#">&#xf09a;</a>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </main>
+    <!-- <script src="server.js"></script> -->
+
+    <div id="player" style="display:none;">
+        <img id="player-img" src="" alt="">
+        <div class="player-info">
+            <span id="player-title">Song Title</span>
+            <span id="player-artist">Artist</span>
+        </div>
+        <div class="player-controls">
+            <button onclick="prevSong()">⏮</button>
+            <button onclick="togglePlay()" id="play-btn">▶</button>
+            <button onclick="nextSong()">⏭</button>
+        </div>
+        <div class="player-progress">
+            <span id="current-time">0:00</span>
+            <input type="range" id="progress-bar" value="0" min="0" max="100">
+            <span id="duration">0:00</span>
+        </div>
+        <div class="player-volume">
+            <span>🔊</span>
+            <input type="range" id="volume-bar" value="100" min="0" max="100">
+        </div>
+        <audio id="audio-player"></audio>
+    </div>
+    <script>
+        const token = localStorage.getItem('token')
+        const username = localStorage.getItem('username')
+
+        if (token) {
+            document.querySelector('button').textContent = username
+        }
+
+        let searchTimeout
+        document.querySelector('input').addEventListener('input', (e) => {
+            clearTimeout(searchTimeout)
+            searchTimeout = setTimeout(async () => {
+                const q = e.target.value.trim()
+
+                if (!q) {
+                    // restore trending songs when search is cleared
+                    fetch('/api/trending')
+                        .then(res => res.json())
+                        .then(songs => {
+                            const container = document.querySelector('.trendingsongs .images')
+                            container.innerHTML = ''
+                            songs.forEach((song, index) => {
+                                const card = document.createElement('div')
+                                card.className = 'card'
+                                card.style.cursor = 'pointer'
+                                card.innerHTML = `
+                            <img style="height:200px;" width="200px" src="${song.image}" alt="">
+                            <h4>${song.title}</h4>
+                            <p>${song.artist}</p>
+                        `
+                                card.addEventListener('click', () => playSong(song, songs, index))
+                                container.appendChild(card)
+                            })
+                        })
+                    return
+                }
+
+                const res = await fetch(`/api/search?q=${encodeURIComponent(q)}`)
+                const results = await res.json()
+                const container = document.querySelector('.trendingsongs .images')
+                container.innerHTML = ''
+
+                if (results.length === 0) {
+                    container.innerHTML = '<p style="color:white; padding:20px;">No songs found</p>'
+                    return
+                }
+
+                results.forEach((Song, index) => {
+                    const card = document.createElement('div')
+                    card.className = 'card'
+                    card.style.cursor = 'pointer'
+                    card.innerHTML = `
+                <img style="height:200px;" width="200px" src="${Song.image}" alt="">
+                <h4>${Song.title}</h4>
+                <p>${Song.artist}</p>
+            `
+                    card.addEventListener('click', () => playSong(Song, results, index))
+                    container.appendChild(card)
+                })
+            }, 300)
+        })
+        // ─── PLAYLISTS ───
+        const userId = localStorage.getItem('userId')
+
+        // Create playlist when +Create button clicked
+        document.querySelector('.btn').addEventListener('click', async () => {
+            const name = prompt('Enter playlist name:')
+            if (!name) return
+
+            const res = await fetch('/api/playlists', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ name, userId })
+            })
+
+            const data = await res.json()
+            alert('Playlist created: ' + name)
+            loadPlaylists()
+        })
+
+        // Load playlists into sidebar
+        async function loadPlaylists() {
+            if (!userId) return
+            const res = await fetch(`/api/playlists/${userId}`)
+            const playlists = await res.json()
+
+            const sidebar = document.querySelector('.sidebar')
+            const existing = document.getElementById('playlist-list')
+            if (existing) existing.remove()
+
+            const list = document.createElement('div')
+            list.id = 'playlist-list'
+            list.style.cssText = 'margin-top:20px; padding:10px;'
+
+            playlists.forEach(p => {
+                const item = document.createElement('div')
+                item.style.cssText = 'color:white; padding:8px; cursor:pointer; background:#1c1b1b; border-radius:5px; margin-bottom:5px;'
+                item.textContent = '🎵 ' + p.name
+                list.appendChild(item)
+            })
+
+            sidebar.appendChild(list)
+        }
+
+        loadPlaylists()
+        fetch('/api/trending')
+            .then(res => res.json())
+            .then(songs => {
+                const container = document.querySelector('.trendingsongs .images')
+                container.innerHTML = ''
+                songs.forEach((song, index) => {
+                    const card = document.createElement('div')
+                    card.className = 'card'
+                    card.style.cursor = 'pointer'
+                    card.innerHTML = `
+                <img style="height:200px;" width="200px" src="${song.image}" alt="">
+                <h4>${song.title}</h4>
+                <p>${song.artist}</p>
+            `
+                    card.addEventListener('click', () => playSong(song, songs, index))
+                    container.appendChild(card)
+                })
+            })
+        fetch('/api/artists')
+            .then(res => res.json())
+            .then(artists => {
+                const container = document.querySelector('.popularartists .images')
+                container.innerHTML = ''
+
+                artists.forEach(artist => {
+                    container.innerHTML += `
+                <div class="card1">
+                    <img src="${artist.image}" alt="">
+                    <h4>${artist.name}</h4>
+                    <p>Artist</p>
+                </div>
+            `
+                })
+            })
+        fetch('/api/albums')
+            .then(res => res.json())
+            .then(albums => {
+                // 2nd .trendingsongs section is albums (index 1)
+                const container = document.querySelectorAll('.trendingsongs .images')[1]
+                container.innerHTML = ''
+
+                albums.forEach((album, index) => {
+                    const card = document.createElement('div')
+                    card.className = 'card'
+                    card.style.cursor = 'pointer'
+                    card.innerHTML = `
+                <img style="height:200px;" width="200px" src="${album.image}" alt="">
+                <h4>${album.title}</h4>
+                <p>${album.artist}</p>
+            `
+                    card.addEventListener('click', () => playSong(album, albums, index))
+                    container.appendChild(card)
+                })
+            })
+        fetch('/api/radio')
+            .then(res => res.json())
+            .then(stations => {
+                const container = document.querySelector('.popularradio .images')
+                container.innerHTML = ''
+
+                stations.forEach(station => {
+                    container.innerHTML += `
+                    <div class="card">
+                        <img style="height:200px;" width="200px" src="${station.image}" alt="">
+                        <p>${station.title}</p>
+                    </div>
+    `
+                })
+            })
+        fetch('/api/charts')
+            .then(res => res.json())
+            .then(charts => {
+                const container = document.querySelector('.featuredcharts .images')
+                container.innerHTML = ''
+
+                charts.forEach(chart => {
+                    container.innerHTML += `
+                    <div class="card">
+                        <img style="height:200px;" width="200px" src="${chart.image}" alt="">
+                        <p>${chart.title}</p>
+                     </div>
+    `
+                })
+
+
+            })
+        // ─── MUSIC PLAYER ───
+        const audio = document.getElementById('audio-player')
+        const playBtn = document.getElementById('play-btn')
+        const progressBar = document.getElementById('progress-bar')
+        const currentTimeEl = document.getElementById('current-time')
+        const durationEl = document.getElementById('duration')
+        const volumeBar = document.getElementById('volume-bar')
+
+        let currentSongs = []
+        let currentIndex = 0
+
+        function playSong(song, songList = [], index = 0) {
+            currentSongs = songList
+            currentIndex = index
+            document.getElementById('player').style.display = 'flex'
+            document.getElementById('player-img').src = song.image
+            document.getElementById('player-title').textContent = song.title
+            document.getElementById('player-artist').textContent = song.artist
+            audio.src = song.audioUrl
+            audio.play()
+            playBtn.textContent = '⏸'
+        }
+
+        function togglePlay() {
+            if (audio.paused) {
+                audio.play()
+                playBtn.textContent = '⏸'
+            } else {
+                audio.pause()
+                playBtn.textContent = '▶'
+            }
+        }
+
+        function nextSong() {
+            if (currentIndex < currentSongs.length - 1) {
+                currentIndex++
+                playSong(currentSongs[currentIndex], currentSongs, currentIndex)
+            }
+        }
+
+        function prevSong() {
+            if (currentIndex > 0) {
+                currentIndex--
+                playSong(currentSongs[currentIndex], currentSongs, currentIndex)
+            }
+        }
+
+        audio.addEventListener('timeupdate', () => {
+            const progress = (audio.currentTime / audio.duration) * 100
+            progressBar.value = progress || 0
+            currentTimeEl.textContent = formatTime(audio.currentTime)
+            durationEl.textContent = formatTime(audio.duration)
+        })
+
+        progressBar.addEventListener('input', () => {
+            audio.currentTime = (progressBar.value / 100) * audio.duration
+        })
+
+        volumeBar.addEventListener('input', () => {
+            audio.volume = volumeBar.value / 100
+        })
+
+        audio.addEventListener('ended', () => {
+            nextSong()
+        })
+
+        function formatTime(seconds) {
+            if (isNaN(seconds)) return '0:00'
+            const m = Math.floor(seconds / 60)
+            const s = Math.floor(seconds % 60).toString().padStart(2, '0')
+            return `${m}:${s}`
+        }
+
+        // LOGIN
+        document.querySelector('button').addEventListener('click', async () => {
+            const email = prompt('Enter your email:')
+            const password = prompt('Enter your password:')
+
+            const res = await fetch('/api/auth/login', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ email, password })
+            })
+
+            const data = await res.json()
+
+            if (data.token) {
+                localStorage.setItem('token', data.token)
+                localStorage.setItem('username', data.username)
+                localStorage.setItem('userId', data.userId)
+                alert(`Welcome back ${data.username}!`)
+                location.reload()
+            }
+        })
+    </script>
+    <!-- Music Player Bar -->
+</body>
+
+</html>

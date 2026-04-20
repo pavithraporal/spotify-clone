@@ -1,0 +1,506 @@
+*{
+            margin  : 0px;
+            padding : 0px;
+            background-color: black;
+            box-sizing: border-box;
+        }
+
+        header{
+            color: white;
+            padding: 10px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid #333;
+        }
+        nav  {
+            display: flex;
+        }
+        .logo {
+            margin-right: 20px;
+        }
+        .home {
+            margin-right: 10px;
+        }
+        .content {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-left: 593px; 
+        }
+        button{
+            background-color: white;
+            color: #333;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: medium;
+        }
+        input{
+            background-color: #333;
+            border  : none;
+            padding : 20px;
+            border-radius: 20px;
+        }
+
+        input:hover {
+            border: 1px solid white;
+        }
+        svg{
+            background-color: #333;
+        }
+
+        /* ─── SIDEBAR FIX ─── */
+        main{
+            display: flex;
+            gap: 5px;
+            align-items: flex-start;
+            height: calc(100vh - 53px); /* subtract header height */
+            overflow: hidden;           /* prevent main itself from scrolling */
+        }
+
+        .sidebar{
+            width : 20vw;
+            border-radius: 10px;
+            height: 100%;               /* fill the fixed main height */
+            margin: 5px;
+            padding: 5px;
+            background-color: #1c1b1b;
+            overflow-y: auto;           /* sidebar scrolls internally if needed */
+            flex-shrink: 0;
+        }
+
+        .sidebar::-webkit-scrollbar {
+            width: 4px;
+        }
+        .sidebar::-webkit-scrollbar-thumb {
+            background: #555;
+            border-radius: 4px;
+        }
+
+        .container{
+            flex: 1;
+            background-color: #1c1b1b;
+            border-radius: 10px;
+            padding: 30px;
+            height: 100%;               /* fill the fixed main height */
+            overflow-y: auto;           /* only container scrolls */
+        }
+        /* ─────────────────── */
+
+        .in{
+            display  :flex;
+            align-items: center;
+            justify-content: space-between;
+            margin:5px;
+            padding : 4px;
+            background-color: #1c1b1b;
+        }
+
+        .btn{
+            background-color: #333;
+            color  : white;
+            border-radius: 20px;
+        }
+        span{
+            background-color: #1c1b1b;
+        }
+        .fi, .si {
+            background-color: #333;
+            color: white;
+            border-radius: 9px;
+            border: none;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding: 10px;
+            text-align: left;
+            align-items: flex-start;
+            margin-top: 30px;
+        }
+        p{
+            color: white;
+            background-color: #333;
+        }
+        h4{
+            color: white;
+            background-color: #333;
+        }
+        .bold{
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        .sidebar-footer {
+            background-color: #121212;
+            color: white;
+            border-radius: 9px;
+            padding: 20px 10px;
+            margin-top: 30px;
+            font-size: small;
+            border-top: 1px solid #333;
+        }
+        .sidebar-footer a {
+            text-decoration: none;
+            color: #b3b3b3;
+            background-color: transparent;
+            transition: color 0.2s;
+        }
+        .sidebar-footer a:hover {
+            color: white;
+        }
+        .sidebar-footer .lfoot {
+            background-color: #121212;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .sidebar-footer .footcontent {
+            background-color: transparent;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 10px;
+        }
+        .sidebar-footer .footcontent .bg {
+            background-color: transparent;
+        }
+        .sidebar-footer .footcontent .bg a {
+            display: block;
+            color: #b3b3b3;
+            font-size: 11px;
+            background-color: transparent;
+            padding: 3px 0;
+        }
+        .sidebar-footer .bg {
+            background-color: transparent;
+        }
+
+        footer {
+            background-color: #121212;
+            color: white;
+            border-radius: 9px;
+            padding: 40px 30px 20px;
+            margin-top: 30px;
+            font-size: small;
+            border-top: 1px solid #333;
+        }
+
+        footer a {
+            text-decoration: none;
+            color: #b3b3b3;
+            background-color: transparent;
+            transition: color 0.2s;
+        }
+        footer a:hover {
+            color: white;
+        }
+
+        .lfoot {
+            background-color: #121212;
+            display: flex;
+            flex-direction: column;  
+            gap: 10px;
+        }
+        .footcontent {
+            background-color: transparent;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .footcontent .bg {
+            background-color: transparent;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .footcontent .bg h5 {
+            color: white;
+            font-size: 14px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            margin-right: 0;
+            background-color: transparent;
+        }
+
+        .footcontent .bg a {
+            display: block;
+            color: #b3b3b3;
+            font-size: 13px;
+            background-color: transparent;
+            padding: 3px 0;
+        }
+
+        .bg{
+            background-color: #333;
+        }
+        .footcontent > a {
+            display: block;  
+            grid-column: span 1;
+        }
+
+        .black{
+            background-color: black;
+        }
+
+        .lang{
+            background-color: #333;
+            color: white;
+            font-weight: bold;
+            border: 1px solid white;
+        }
+
+        .trendingsongs{
+            background-color: #1c1b1b;
+        }
+
+        .popularartist{
+            background-color: #1c1b1b;
+        }
+        .heading{
+            display:flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+            background-color: #1c1b1b;
+        }
+        h3{
+            color: white;
+            background-color: #1c1b1b;
+            font-size: larger;
+        }
+
+        h5{
+            color:white;
+            margin-right : 60px;
+            background-color: #1c1b1b;
+        }
+
+        .images{
+            display: flex;
+            overflow-x: scroll;
+            overflow-y: hidden;
+            gap: 15px;
+            background-color: #1c1b1b;
+            padding: 10px 0;
+        }
+        .card img {
+            display: block;
+            border-radius: 6px;
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card1 img {
+            display: block;
+            border-radius: 50%;
+            width: 200px;
+            height: 200px;
+            object-fit: cover; 
+        }
+        .images::-webkit-scrollbar{
+            display: none;
+        }
+        .card  {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            background-color: #1c1b1b;
+            border-radius: 8px;
+            padding: 10px;
+            min-width: 200px;
+            width: 200px;
+            flex-shrink: 0;
+        } 
+        .card1  {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            background-color: #1c1b1b;
+            border-radius: 8px;
+            padding: 10px;
+            min-width: 200px;
+            width: 200px;
+            flex-shrink: 0;
+        }
+
+        .card h4 {
+            background-color: #1c1b1b;
+            color: white;
+            margin-top: 5px;
+            font-size: 20px;
+        }
+
+        .card1 h4 {
+            background-color: #1c1b1b;
+            color: white;
+            margin-top: 5px;
+            font-size: 20px;
+        }
+
+        .card p {
+            background-color: #1c1b1b;
+            color: #aaa;
+            margin-top: 5px;
+            font-size: 15px;
+        }
+
+        .card1 p {
+            background-color: #1c1b1b;
+            color: #aaa;
+            margin-top: 5px;
+            font-size: 15px;
+        }
+        a{
+            background-color: #333;
+        }
+        ul li{
+            background-color: #333;
+            color: white;
+            list-style-type: none;
+            padding: 5px 0;
+        }
+
+        .foot-bottom {
+            background-color: transparent;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 20px;
+            border-top: 1px solid #333;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 10px;
+            background-color: transparent;
+        }
+
+        .social-icons a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #333;
+            color: white;
+            font-size: 16px;
+            transition: background-color 0.2s;
+        }
+
+        .social-icons a:hover {
+            background-color: #555;
+        }
+
+        .foot-copy {
+            color: #b3b3b3;
+            font-size: 12px;
+            background-color: transparent;
+        }
+
+        .bg {
+            background-color: transparent;
+        }
+        .container::-webkit-scrollbar{
+            display: none;
+        }
+#player {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    background-color: #181818;
+    border-top: 1px solid #333;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    gap: 20px;
+    z-index: 9999;
+}
+
+#player img {
+    width: 56px;
+    height: 56px;
+    border-radius: 4px;
+    background-color: #333;
+}
+
+.player-info {
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+    min-width: 150px;
+}
+
+.player-info span {
+    background-color: transparent;
+    color: white;
+    font-size: 13px;
+}
+
+.player-info span:last-child {
+    color: #aaa;
+    font-size: 11px;
+}
+
+.player-controls {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    background-color: transparent;
+}
+
+.player-controls button {
+    background-color: transparent;
+    color: white;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.player-progress {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex: 1;
+    background-color: transparent;
+}
+
+.player-progress span {
+    color: #aaa;
+    font-size: 11px;
+    background-color: transparent;
+}
+
+#progress-bar, #volume-bar {
+    background-color: transparent;
+    accent-color: #1db954;
+    cursor: pointer;
+    border-radius: 0;
+    padding: 0;
+    border: none;
+}
+
+#progress-bar {
+    flex: 1;
+}
+
+.player-volume {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: transparent;
+}
+
+.player-volume span {
+    background-color: transparent;
+}
+
+#volume-bar {
+    width: 80px;
+}

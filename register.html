@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register</title>
+    <style>
+        body { background: black; color: white; display: flex; justify-content: center; align-items: center; height: 100vh; font-family: sans-serif; }
+        input { display: block; margin: 10px 0; padding: 10px; width: 300px; border-radius: 8px; border: none; }
+        button { padding: 10px 30px; background: #1db954; color: white; border: none; border-radius: 20px; cursor: pointer; font-size: 16px; }
+        h2 { color: #1db954; }
+    </style>
+</head>
+<body>
+    <div>
+        <h2>Create Account</h2>
+        <input type="text" id="username" placeholder="Username">
+        <input type="email" id="email" placeholder="Email">
+        <input type="password" id="password" placeholder="Password">
+        <button onclick="register()">Sign Up</button>
+        <p id="msg"></p>
+    </div>
+        
+    <script>
+        async function register() {
+            const username = document.getElementById('username').value
+            const email = document.getElementById('email').value
+            const password = document.getElementById('password').value
+
+            const res = await fetch('/api/auth/register', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ username, email, password })
+            })
+
+            const data = await res.json()
+            document.getElementById('msg').textContent = data.message
+        }
+    </script>
+</body>
+</html>
