@@ -11,22 +11,23 @@ mongoose.connect(process.env.MONGODB_URL, {
 
 const songs = [
     // ─── TRENDING ───
-    { title: "Ranjha", artist: "Diljit Dosanjh", image: "Assets/trending songs/first.jpeg", audioUrl: "Assets/songs/ranjha.mp3", type: "trending", genre: "punjabi", duration: "3:45" },
-    { title: "VOGUE", artist: "Guru Randhawa", image: "Assets/trending songs/second.jpeg", audioUrl: "Assets/songs/vogue.mp3", type: "trending", genre: "punjabi", duration: "3:20" },
-    { title: "Majboor", artist: "Sheheryar Rehan", image: "Assets/trending songs/third.jpeg", audioUrl: "Assets/songs/majboor.mp3", type: "trending", genre: "urdu", duration: "4:10" },
-    { title: "Moves", artist: "Shubh", image: "Assets/trending songs/fourth.jpeg", audioUrl: "Assets/songs/moves.mp3", type: "trending", genre: "punjabi", duration: "3:55" },
-    { title: "Bheegi Bheegi", artist: "A.R.Rahman", image: "Assets/trending songs/fifth.jpeg", audioUrl: "Assets/songs/bheegi-bheegi.mp3", type: "trending", genre: "bollywood", duration: "4:30" },
-    { title: "Pavazha Malli", artist: "Sai Abhyankkar", image: "Assets/trending songs/sixth.jpeg", audioUrl: "Assets/songs/pavazha-malli.mp3", type: "trending", genre: "tamil", duration: "3:15" },
-    { title: "Dheema", artist: "Anirudh Ravichander", image: "Assets/trending songs/seveth.jpeg", audioUrl: "Assets/songs/dheema.mp3", type: "trending", genre: "tamil", duration: "3:40" },
-    { title: "Ehsaas", artist: "Faheem Abdullah", image: "Assets/trending songs/eighth.jpeg", audioUrl: "Assets/songs/ehsaas.mp3", type: "trending", genre: "urdu", duration: "4:00" },
+    { title: "Ranjha", artist: "Diljit Dosanjh", image: "Assets/trending songs/first.jpeg", audioUrl: "Assets/Songs/Ranjha.mp3", type: "trending", genre: "punjabi", duration: "3:45" },
+    { title: "VOGUE", artist: "Guru Randhawa", image: "Assets/trending songs/second.jpeg", audioUrl: "Assets/Songs/VOUGE.mp3", type: "trending", genre: "punjabi", duration: "3:20" },
+    { title: "Majboor", artist: "Sheheryar Rehan", image: "Assets/trending songs/third.jpeg", audioUrl: "Assets/Songs/Majboor.mp3", type: "trending", genre: "urdu", duration: "4:10" },
+    { title: "Moves", artist: "Shubh", image: "Assets/trending songs/fourth.jpeg", audioUrl: "Assets/Songs/Moves.mp3", type: "trending", genre: "punjabi", duration: "3:55" },
+    { title: "Bheegi Bheegi", artist: "A.R.Rahman", image: "Assets/trending songs/fifth.jpeg", audioUrl: "Assets/Songs/Bheegi-Bheegi.mp3", type: "trending", genre: "bollywood", duration: "4:30" },
+    { title: "Pavazha Malli", artist: "Sai Abhyankkar", image: "Assets/trending songs/sixth.jpeg", audioUrl: "Assets/Songs/Pavazha-Malli.mp3", type: "trending", genre: "tamil", duration: "3:15" },
+    { title: "Dheema", artist: "Anirudh Ravichander", image: "Assets/trending songs/seveth.jpeg", audioUrl: "Assets/Songs/Dheema.mp3", type: "trending", genre: "tamil", duration: "3:40" },
+    { title: "Ehsaas", artist: "Faheem Abdullah", image: "Assets/trending songs/eighth.jpeg", audioUrl: "Assets/Songs/Ehsaas.mp3", type: "trending", genre: "urdu", duration: "4:00" },
 
     // ─── ALBUMS ───
     { title: "Aashiqui 2", artist: "Mithoon", image: "Assets/popular albums/first.jpeg", audioUrl: "Assets/Songs/tum-hi-ho.mp3", type: "album", genre: "bollywood", duration: "4:20" },
     { title: "Yeh Jawaani Hai Deewani", artist: "Pritam", image: "Assets/popular albums/second.jpeg", audioUrl: "Assets/Songs/badtameez-dil.mp3", type: "album", genre: "bollywood", duration: "5:10" },
     { title: "Sanam Teri Kasam", artist: "Himesh Reshammiya", image: "Assets/popular albums/third.jpeg", audioUrl: "Assets/Songs/sanam-teri-kasam.mp3", type: "album", genre: "bollywood", duration: "4:45" },
     { title: "Finding Her", artist: "Kushagra", image: "Assets/popular albums/fourth.jpeg", audioUrl: "Assets/Songs/finding-her.mp3", type: "album", genre: "indie", duration: "3:30" },
-    { title: "Young G.O.A.T", artist: "Cheema Y", image: "Assets/popular albums/fifth.jpeg", audioUrl: "Assets/Songs/young-goat.mp3", type: "album", genre: "punjabi", duration: "3:50" },
-    { title: "Raanjhan", artist: "Sachet-Parampara", image: "Assets/popular albums/sixth.jpeg", audioUrl: "Assets/Songs/raanjhan.mp3", type: "album", genre: "bollywood", duration: "4:15" },
+    { title: "Young G.O.A.T", artist: "Cheema Y", image: "Assets/popular albums/fifth.jpeg", audioUrl: "Assets/Songs/young-goat.mp3", 
+        type: "album", genre: "punjabi", duration: "3:50" },
+    { title: "Raanjhan", artist: "Sachet-Parampara", image: "Assets/popular albums/sixth.jpeg", audioUrl: "Assets/Songs/Raanjhan.mp3", type: "album", genre: "bollywood", duration: "4:15" },
     { title: "Ultimate Love Songs", artist: "Arijit Singh", image: "Assets/popular albums/seventh.jpeg", audioUrl: "Assets/Songs/ultimate-love.mp3", type: "album", genre: "bollywood", duration: "4:55" },
     { title: "Making Memories", artist: "Karan Aujla", image: "Assets/popular albums/eighth.jpeg", audioUrl: "Assets/Songs/making-memories.mp3", type: "album", genre: "punjabi", duration: "3:25" },
 
